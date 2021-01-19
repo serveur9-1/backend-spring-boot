@@ -56,7 +56,7 @@ public class JuryController {
             result = new ResponseEntity<>(HttpStatus.OK);
 
         } catch (Exception e) {
-            System.err.println(e.getMessage());
+            result = new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return result;
     }
